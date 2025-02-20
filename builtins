@@ -4,6 +4,8 @@ echo 'hello world'
 echo hello'world'
 echo hello""world
 echo ''
+echo "|"
+echo '|'
 echo "$PWD"
 echo '$PWD'
 echo "aspas ->'"
@@ -28,6 +30,7 @@ export HELLO=123 A
 export HELLO="123 A-"
 export hello world
 export HELLO-=123
+export HELLO+=321
 export =
 export 123
 unset
