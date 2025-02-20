@@ -1,5 +1,8 @@
 <img width="1728" alt="image" src="https://user-images.githubusercontent.com/26127185/175815870-be78bbd5-d1be-4164-954a-982768c6b147.png">
 
+# What is this?
+Noticing that the original repository had not been updated for a while, I added some tests and fixed some bugs related to checking 'exit' in stderr.
+
 # Installation 
 Clone the repo **inside** your minishell folder 
 ```sh
