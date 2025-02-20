@@ -9,6 +9,7 @@ cat <"1""2""3""4""5"
 echo <"./test_files/infile" <missing <"./test_files/infile"
 echo <missing <"./test_files/infile" <missing
 cat <"./test_files/infile"
+echo "hello how are you doing?" >>>>>>> outfile
 echo <"./test_files/infile_big" | cat <"./test_files/infile"
 echo <"./test_files/infile_big" | cat "./test_files/infile"
 echo <"./test_files/infile_big" | echo <"./test_files/infile"
