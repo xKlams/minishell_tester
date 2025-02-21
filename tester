@@ -122,8 +122,8 @@ if [[ "$ok" == "$i" ]]; then
 	echo "🎊 🎊 🎊"
 	echo "😎 😎 😎"
 	echo "🎉 🎉 🎉"
-	exit 0
 else
 	echo "😭 😭 😭"
-	exit 1
 fi
+
+sh ./leak_tester/tester.sh
