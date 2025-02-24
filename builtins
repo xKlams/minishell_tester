@@ -1,55 +1,145 @@
 echo hello world
 echo "hello world"
 echo 'hello world'
-echo hello'world'
-echo hello""world
+echo helloworld
+echo helloworld
 echo ''
 echo "|"
 echo '|'
-echo "$PWD"
-echo '$PWD'
 echo "aspas ->'"
 echo "aspas -> ' "
 echo 'aspas ->"'
 echo 'aspas -> " '
-echo "> >> < * ? [ ] | ; [ ] || && ( ) & # $ \ <<"
-echo '> >> < * ? [ ] | ; [ ] || && ( ) & # $ \ <<'
-echo "exit_code ->$? user ->$USER home -> $HOME"
-echo 'exit_code ->$? user ->$USER home -> $HOME'
-echo "$"
-echo '$'
-echo $
-echo $?
-echo $?HELLO
+echo "hello     world"
+echo hello          world
+echo "hello     world"
+echo 'hello          world'
+echo hello\ world
+echo "hello\nworld"
+echo 'hello\nworld'
+echo
+echo "" ""
+echo '' ''
+echo " " " "
+echo ' ' ' '
+echo "  "  "  "
+echo '  '  '  '
+echo "mixed quotes '\"' and \"'\""
+echo 'mixed quotes \'"\' and "\'"'
+echo "tab\tspace space"
+echo 'tab\tspace space'
+echo "newline\nnewline"
+echo 'newline\nnewline'
+echo "carriage\rreturn"
+echo 'carriage\rreturn'
+echo "formfeed\f"
+echo 'formfeed\f'
+echo "vertical\vtab"
+echo 'vertical\vtab'
+echo "backspace\b"
+echo 'backspace\b'
+echo "alert\a"
+echo 'alert\a'
+echo "variable \$USER and \$HOME"
+echo 'variable \$USER and \$HOME'
+echo "tilde expansion ~"
+echo 'tilde expansion ~'
+echo "redirect >" > outputs/output1.txt
+echo "append >>" >> outputs/output1.txt
+echo "redirected echo" > outputs/output2.txt
+echo -n "no newline redirect" > outputs/output3.txt
+echo "pipe echo" > outputs/output4.txt
+export MY_ECHO_VAR
+echo \$MY_ECHO_VAR
+echo "\$MY_ECHO_VAR"
+echo '\$MY_ECHO_VAR'
+echo "var and text \$MY_ECHO_VAR more text"
+echo 'var and text \$MY_ECHO_VAR more text'
+false
+true
+echo "exit status pipe: \$?" > outputs/output5.txt
+exit 0 > outputs/output6.txt
+exit 1 >> outputs/output6.txt
+exit 50
+exit 127
+exit 255
+exit 256
+exit -1
 pwd
-pwd oi
-export hello
-export HELLO=123
-export A-
-export HELLO=123 A
-export HELLO="123 A-"
-export hello world
-export HELLO-=123
-export HELLO+=321
-export =
-export 123
-unset
-unset HELLO
-unset HELLO1 HELLO2
-unset HOME
-unset PATH
-unset SHELL
-cd $PWD
-cd $PWD hi 
-cd 123123
-exit 123
-exit 298
-exit +100
-exit "+100"
-exit +"100"
-exit -100
-exit "-100"
-exit -"100"
-exit hello
-exit 42 world
-
+pwd .
+pwd ..
+pwd /
+pwd ./subdir/
+pwd " "
+pwd ''
+pwd > outputs/output7.txt
+pwd >> outputs/output7.txt
+pwd > outputs/output8.txt
+cd /tmp
+cd tmp
+cd .
+cd ..
+cd ~
+cd
+cd /
+cd ./subdir
+cd ../parentdir
+mkdir "test dir with spaces" 2>/dev/null
+cd "test dir with spaces"
+cd ..
+rmdir "test dir with spaces" 2>/dev/null
+mkdir "test'dir'quotes" 2>/dev/null
+cd "test'dir'quotes"
+cd ..
+rmdir "test'dir'quotes" 2>/dev/null
+cd "test\\ dir"
+cd "test\\\$var"
+cd "test*"
+cd non_existent_dir
+cd /tmp > outputs/output9.txt
+cd /usr/bin >> outputs/output9.txt
+cd .. > outputs/output10.txt
+cd ""
+cd " "
+export MYVAR=value
+export MY_VAR="value with spaces"
+export MYVAR='value with quotes'
+export EMPTY_VAR=
+export VAR_WITH_EQUAL="value=equals"
+export VAR1=value1 VAR2=value2
+export VAR_EXPAND_EXPORT
+export EXPANDED_VAR="\$VAR_EXPAND_EXPORT value"
+export SINGLE_QUOTE_EXPANDED='\$VAR_EXPAND_EXPORT value'
+export CHECK_ENV_VAR=env_check
+export OVERWRITE_VAR_INIT=initial
+export OVERWRITE_VAR_INIT=newvalue
+export 1INVALID=value
+export IN-VALID=value
+export IN\ VAL\ ID=value
+export REDIRECT_VAR="redir > output10.txt"
+export APPEND_VAR="append >> output10.txt"
+export PIPE_VAR="pipe redirect > output11.txt"
+export UNSET_TEST=value_unset
+unset UNSET_TEST
+unset NON_EXISTENT_VAR
+unset VAR1 VAR2 VAR3
+export MY_HOME_VAR=\$HOME
+unset MY_HOME_VAR
+unset ""
+unset " "
+unset REDIR_UNSET > outputs/output12.txt
+unset APPEND_UNSET >> outputs/output12.txt
+unset PIPE_UNSET > outputs/output13.txt
+echo "hello" > outputs/output14.txt
+< outputs/output14.txt cat > outputs/output15.txt
+pwd > outputs/output16.txt
+export CHECK_ENV_VAR=env_check
+export CHECK_ENV_VAR=env_check
+echo "var=\$MY_ECHO_VAR" > outputs/output17.txt
+< outputs/output17.txt cat
+echo "test" > input.txt > outputs/output18.txt
+< input.txt cat > outputs/output19.txt
+echo "test" > input2.txt > outputs/output20.txt
+< input2.txt cat
+echo "test" > input4.txt > outputs/output21.txt
+< input4.txt cat

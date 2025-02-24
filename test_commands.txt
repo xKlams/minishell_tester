@@ -1,0 +1,18 @@
+echo hello world
+ls -l
+pwd
+cd ..
+mkdir test_dir
+cd test_dir
+pwd
+ls -la
+echo "test redirect" > output.txt
+cat < output.txt
+ls | grep output
+env
+export MYVAR=testvalue
+echo $MYVAR
+unset MYVAR
+echo $MYVAR
+command_not_found
+exit
