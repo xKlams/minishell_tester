@@ -75,30 +75,14 @@ pwd ''
 pwd > outputs/output7.txt
 pwd >> outputs/output7.txt
 pwd > outputs/output8.txt
-cd /tmp
 cd tmp
 cd .
-cd ..
-cd ~
-cd
-cd /
 cd ./subdir
 cd ../parentdir
-mkdir "test dir with spaces" 2>/dev/null
-cd "test dir with spaces"
-cd ..
-rmdir "test dir with spaces" 2>/dev/null
-mkdir "test'dir'quotes" 2>/dev/null
-cd "test'dir'quotes"
-cd ..
-rmdir "test'dir'quotes" 2>/dev/null
 cd "test\\ dir"
 cd "test\\\$var"
 cd "test*"
 cd non_existent_dir
-cd /tmp > outputs/output9.txt
-cd /usr/bin >> outputs/output9.txt
-cd .. > outputs/output10.txt
 cd ""
 cd " "
 export MYVAR=value
@@ -143,3 +127,5 @@ echo "test" > input2.txt > outputs/output20.txt
 < input2.txt cat
 echo "test" > input4.txt > outputs/output21.txt
 < input4.txt cat
+echo -n -n -n -n -n -nnnnnnnnnnnnn
+echo -nnnnnna

@@ -2,3 +2,24 @@ env | sort | grep -v SHLVL | grep -v ^_
 cat ./test_files/infile_big | grep oi
 cat minishell.h | grep ");"$
 export GHOST=123 | env | grep GHOST
+ls | wc -l
+ls -la | grep "^d"
+echo "ciao" | wc -c
+cat /etc/passwd | head -n 5
+ls -la | grep "^-" | wc -l
+cat /etc/passwd | grep "sh$" | sort -r
+ls | sort | uniq | wc -l
+echo "Minishell è fantastico" | tr ' ' '\n' | sort
+ls | inesistente
+inesistente | ls
+cat inesistente.txt | grep "ciao"
+cat /etc/passwd | grep "root" | inesistente
+ls > file.txt | wc -l
+cat < file.txt | grep "a"
+ls | grep "a" > output.txt
+ls | | wc -l
+ls ||| wc -l
+echo "Questo | non è una pipe" | grep "pipe"
+echo 'Testo con | carattere' | wc -c
+cat Makefile | grep "^[[:space:]]*#" | wc -l
+env | sort | grep "^PATH" | tr ':' '\n'

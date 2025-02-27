@@ -1,1 +1,9 @@
-test redirect
+bash_outfiles
+bash.supp
+extras
+leak_tester
+local.supp
+manual_tests
+syntax
+test_commands.txt
+wildcards
